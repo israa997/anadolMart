@@ -1,0 +1,78 @@
+.formGroup{
+    border: 1px solid #8c8c8c !important;
+    background-color: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-align: start;
+    appearance: textfield;
+    outline: none !important;
+    box-sizing: border-box !important;
+    width: 100%;
+  line-height: inherit;
+}
+.formGroup :hover{
+    display: none !important;
+}
+.formGroup :active{
+    display: none !important;
+}
+.formGroup:focus {
+    outline:none !important;
+    
+}
+
+/* #formBasicCheckbox{
+    background-color: white !important;
+} */
+
+/* .formCheckInpu:checked{
+    display: none!important;
+   
+  } */
+
+input[type="checkbox"]{
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-right: 6px;
+    -webkit-appearance: none;
+    border: none;
+    outline: none;
+} 
+
+input[type=checkbox]:before {
+    position: absolute;
+    font-family: icomoon;
+    display: inline-block;
+    top: -2px;
+    color: #8c8c8c;
+    content: "";
+    /* content: "\f046"; */
+}
+input[type=checkbox]:checked:after {
+    position: absolute;
+    font-family: icomoon;
+    display: inline-block;
+    font-size: 8px;
+    top:4px;
+    left: 3px;
+    content: '✔';
+}
+.modalTitle{
+  
+    display: flex !important; 
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}	
+a {
+
+    text-decoration: none;
+    color :black;
+    background-color: none;
+}
+a:hover {
+    text-decoration: none;
+    color:black;
+    background-color:white;
+  }
