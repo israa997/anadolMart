@@ -25,17 +25,21 @@ return(
    <Form.Check type="checkbox" label="Privacy Policy" required onClick={toggle}  className={styles.formCheckInput}/>        
      {!privacy_policy ? (<p>loading....{/*translate*/} </p>): (
          <Modal show={show} onHide={toggle} centered>
+          
          <Modal.Header closeButton centered>
- 
-           <Modal.Title  className={styles.modalTitle}>{privacy_policy[0].header}</Modal.Title>
+
+           <Modal.Title  className={styles.modalTitle}>{privacy_policy[0].header_ar}</Modal.Title>
          </Modal.Header>
          <Modal.Body>
-             {privacy_policy[0].content}
+             {privacy_policy[0].content_ar}
          </Modal.Body>
-       </Modal>
+      </Modal>
      )}
 
       
     </>
 )};
 export {PrivacyPolicy};
+
+
+//{ privacy_policy.map((p) => (p.header_ar ))}
