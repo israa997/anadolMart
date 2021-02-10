@@ -11,10 +11,12 @@ import { getAllCountries } from './actions/countriesAction';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { getAboutList } from './actions/aboutAction';
+import { getBannerList } from './actions/bannerAction';
 
 !sessionStorage.getItem("products") && store.dispatch(listProducts());
 !sessionStorage.getItem("countries") && store.dispatch(getAllCountries());
 store.dispatch(getAboutList());
+store.dispatch(getBannerList());
 ReactDOM.render(
   <Provider store={store}>
     <App />

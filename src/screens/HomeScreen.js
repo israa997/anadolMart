@@ -8,7 +8,7 @@ import Loader from "../components/Loader";
 import { LinkContainer } from "react-router-bootstrap";
 import ProductCarousel from "../components/ProductCarousel";
 import Meta from "../components/Meta";
-
+import Banner from '../components/banner.js'
 const HomeScreen = () => {
   const productsList = useSelector((state) => state.productList);
   const { loading, products } = productsList;
@@ -17,6 +17,7 @@ const HomeScreen = () => {
   const isMobile = window.innerWidth <= 500;
   return (
     <>
+    <div  style={{backgroundColor:"black", color:"white" , fontSize:"20px", textAlign:"center"}}><Banner/></div>
       {!isMobile && (
         <Nav className="justify-content-center" style={{ fontSize: "1.5em" }}>
           <Nav.Item>
