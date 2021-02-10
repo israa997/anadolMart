@@ -6,7 +6,7 @@ function SocialAccounts (){
     const [socialAccount, fetchSocialAccount]= useState();
     const getSocialAccounts = useCallback(
         async _=> {
-            const {data} = await axios.get('http://192.168.1.39:5000/api/home/social-accounts');
+            const {data} = await axios.get('http://192.168.1.38:5000/api/home/social-accounts');
         fetchSocialAccount(data);
     } ,[]
     );

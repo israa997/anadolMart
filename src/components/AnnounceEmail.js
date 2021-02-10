@@ -2,13 +2,12 @@ import axios from 'axios';
 import React, {useState,useEffect,useCallback} from 'react';
 import {PrivacyPolicy} from './PrivacyPolicy.js';
 import {SocialAccounts} from './socialAccount.js';
-import {Button,Form, Col, Modal} from 'react-bootstrap'; 
+import {Button,Form, Col, Modal, Container, Row, } from 'react-bootstrap'; 
 import styles from './style.module.css';
-
 function AnnounceEmail(){
  const[announceEmail, getEmail]=useState();
  const getAlreadyExistedEmail = useCallback( async _=>{
-  const {data } = await axios.get('http://192.168.1.39:5000/api/home/announce-email');
+  const {data } = await axios.get('http://192.168.1.38:5000/api/home/announce-email');
   getEmail(data)
   for(var i = 0; i < data.length; i++){
     console.log(data[i].email);
@@ -29,7 +28,7 @@ const post = async(e) => {
   try{
  e.preventDefault();
   await axios
-  .post('http://192.168.1.39:5000/api/home/postAnnounce-email', {email});
+  .post('http://192.168.1.38:5000/api/home/postAnnounce-email', {email});
  setStr("post");
   isPost(str);
   console.log(isPost(str));
@@ -64,7 +63,10 @@ const toggle =() => {
 }
      
     return(
-       <div style={{float: 'right'}}> 
+      <Container style={{float: 'right'}} >
+      <Row style={{float: 'right'}}>
+        <Col xs={12} md={12}>
+       
     <h4>E-newsletter</h4>     
            <p>Be the first to know about new product announcements,</p>
             <p>special events and online offers.</p>
@@ -123,7 +125,9 @@ isPost(str)?
 <div>
   <SocialAccounts/>
   </div>
-    </div>
+        </Col>
+      </Row>
+    </Container>
     );
 }
 

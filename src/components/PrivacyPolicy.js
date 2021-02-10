@@ -7,7 +7,7 @@ import { Modal,Form} from 'react-bootstrap';
 function PrivacyPolicy() {
     const [privacy_policy, setprivacy_policy] = useState();
     const getPrivacyPolicy = useCallback( async _=>{
-        const { data } = await axios.get('http://192.168.1.39:5000/api/home/privacy-policy');
+        const { data } = await axios.get('http://192.168.1.38:5000/api/home/privacy-policy');
         setprivacy_policy(data);
     } ,[] 
       );
@@ -24,17 +24,18 @@ return(
    
    <Form.Check type="checkbox" label="Privacy Policy" required onClick={toggle}  className={styles.formCheckInput}/>        
      {!privacy_policy ? (<p>loading....{/*translate*/} </p>): (
-         <Modal show={show} onHide={toggle} centered>
+          privacy_policy.map((policy, index) => (
+         <Modal show={show} onHide={toggle} centered key={index}>
           
          <Modal.Header closeButton centered>
 
-           <Modal.Title  className={styles.modalTitle}>{privacy_policy[0].header_ar}</Modal.Title>
+           <Modal.Title  className={styles.modalTitle}>{policy.header_ar}</Modal.Title>
          </Modal.Header>
          <Modal.Body>
-             {privacy_policy[0].content_ar}
+             {policy.content_ar}
          </Modal.Body>
       </Modal>
-     )}
+          )))}
 
       
     </>
@@ -42,4 +43,3 @@ return(
 export {PrivacyPolicy};
 
 
-//{ privacy_policy.map((p) => (p.header_ar ))}
