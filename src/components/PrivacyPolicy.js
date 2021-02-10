@@ -29,10 +29,9 @@ return(
           
          <Modal.Header closeButton centered>
 
-           <Modal.Title  className={styles.modalTitle}>{policy.header_ar}</Modal.Title>
+           <Modal.Title  className={styles.modalTitle} dangerouslySetInnerHTML={{ __html: policy.header_ar}}></Modal.Title>
          </Modal.Header>
-         <Modal.Body>
-             {policy.content_ar}
+         <Modal.Body dangerouslySetInnerHTML={{ __html: policy.content_ar}}>
          </Modal.Body>
       </Modal>
           )))}
