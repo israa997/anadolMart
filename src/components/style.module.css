@@ -57,6 +57,7 @@ input[type=checkbox]:checked:after {
     top:4px;
     left: 3px;
     content: '✔';
+    background-color: white;
 }
 .modalTitle{
   
