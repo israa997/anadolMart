@@ -13,6 +13,7 @@ import PlaceOrderScreen from './screens/PlaceOrderScreen'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import {ProfileScreen} from './screens/ProfileScreen'
 import userOrderScreen from './screens/UserOrderScreen'
+import About from './components/about.js'
 const App = () => {
   
   return (
@@ -22,6 +23,7 @@ const App = () => {
       <main style={{marginTop: "6rem"}}>
         <Route path='/order/:id' component={OrderScreen} />
           <Route path='/login' component={LoginScreen} />
+          <Route path='/about' component={About} />
           <Route path='/payment' component={PaymentScreen} />
           <Route path='/shipping' component={ShippingScreen} />
           <Route path='/register' component={RegisterScreen} />

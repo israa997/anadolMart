@@ -32,7 +32,7 @@ function SocialAccounts (){
        <div>
            <p></p>
             <h3>contact number</h3>
-        <span style={{desply: 'block'}}><a href = {'tel:' + socialAccount[0].phoneNum}>{socialAccount[0].phoneNum}</a></span>
+        <span style={{desply: 'block', fontSize:"16px", fontWeight:"bold"}}><a href = {'tel:' + socialAccount[0].phoneNum}>{socialAccount[0].phoneNum}</a></span>
         </div>
 </div>
         

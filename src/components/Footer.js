@@ -1,10 +1,19 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import {AnnounceEmail} from './AnnounceEmail.js'
+import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <footer> 
       <Container>
+      <hr></hr>
+      <Row>
+        <Col style={{fontWeight:"bold",fontSize:"16px"}}>
+        <Link to='/about'>
+            About
+          </Link>
+        </Col>
+        </Row>
       <Row>
         <Col>
         <AnnounceEmail/>
