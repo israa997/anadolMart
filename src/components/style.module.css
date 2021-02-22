@@ -79,13 +79,13 @@ button, input[type="button"] :focus, :active{
    outline-offset: 0!important;
    box-shadow:none !important;
     }
-.modalTitle{
+/* .modalTitle{
   
     display: flex !important; 
     justify-content: center !important;
     align-items: center !important;
     text-align: center !important;
-}	
+}	 */
 a {
 
     text-decoration: none;
