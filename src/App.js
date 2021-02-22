@@ -14,6 +14,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import {ProfileScreen} from './screens/ProfileScreen'
 import userOrderScreen from './screens/UserOrderScreen'
 import About from './components/about.js'
+import wishList from './screens/WishListScreen.js'
 
 const App = () => {
   
@@ -26,6 +27,7 @@ const App = () => {
           <Route path='/login' component={LoginScreen} />
           <Route path='/about' component={About} />
           <Route path='/payment' component={PaymentScreen} />
+          <Route path='/favorites' component={wishList} />
           <Route path='/shipping' component={ShippingScreen} />
           <Route path='/register' component={RegisterScreen} />
           <Route path='/profile' component={ProfileScreen} />

@@ -1,8 +1,8 @@
 
 import axios from 'axios';
 import React, {useState, useEffect, useCallback} from 'react';
-import styles from './style.module.css';
 import { Modal,Form} from 'react-bootstrap'; 
+import './style.module.css';
 
 function PrivacyPolicy() {
     const [privacy_policy, setprivacy_policy] = useState();
@@ -22,14 +22,13 @@ function PrivacyPolicy() {
 return(
     <>
    
-   <Form.Check type="checkbox" label="Privacy Policy" required onClick={toggle}  className={styles.formCheckInput}/>        
-     {!privacy_policy ? (<p>loading....{/*translate*/} </p>): (
+   <Form.Check type="checkbox" style={{display:"inline"}} required/> 
+   <button type="button" style={{ textDecoration:"underline", textDecorationColor:"black", border:"none" }} onClick={toggle}> Privacy Policy</button>          
+     {!privacy_policy ? (<p>loading....</p>): (
           privacy_policy.map((policy, index) => (
-         <Modal show={show} onHide={toggle} centered key={index}>
-          
-         <Modal.Header closeButton centered>
-
-           <Modal.Title  className={styles.modalTitle} dangerouslySetInnerHTML={{ __html: policy.header_ar}}></Modal.Title>
+         <Modal show={show} onHide={toggle}  key={index}>
+         <Modal.Header closeButton >
+           <Modal.Title  dangerouslySetInnerHTML={{ __html: policy.header_ar}}></Modal.Title>
          </Modal.Header>
          <Modal.Body dangerouslySetInnerHTML={{ __html: policy.content_ar}}>
          </Modal.Body>

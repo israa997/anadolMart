@@ -5,7 +5,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 import SearchBox from './SearchBox';
 import { Container } from 'react-bootstrap';
-
 import { logout } from '../actions/userActions';
 
 const Header = () => {
@@ -33,6 +32,7 @@ const { userInfo } = userLogin
   }
 
   return (
+
     <header>
       <Container>
      <Navbar expand='md' collapseOnSelect className='p-3' fixed="top" style={{backgroundColor: isMobile? 'black': variantbackgroundcolor}} variant={isMobile ? 'dark' :backgroundColor}>
