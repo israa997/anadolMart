@@ -76,9 +76,9 @@ const About = () => {
             </Container> */}
 
             <Container>
-              <h1>{a.header_en}</h1>
+              <h1>{a.header_ar}</h1>
               <hr></hr>
-    <p dangerouslySetInnerHTML={{ __html: a.content_en }}></p>
+    <p dangerouslySetInnerHTML={{ __html: a.content_ar }}></p>
             </Container>
           </Col>
         ))}
