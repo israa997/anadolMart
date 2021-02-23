@@ -86,7 +86,7 @@ const toggle =() => {
   </Col>
   <Col xs="auto">
 <Button type="submit" variant="outline-dark" onClick={toggle} className={styles.formGroup}>
-  submit 
+  اضافة
   </Button>
 {
 isPost(str)? 
