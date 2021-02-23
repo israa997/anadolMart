@@ -67,9 +67,9 @@ const toggle =() => {
       <Row style={{float: 'right'}}>
         <Col xs={12} md={12}>
        
-    <h4>E-newsletter</h4>     
-           <p>Be the first to know about new product announcements,</p>
-            <p>special events and online offers.</p>
+    <h4>النشرة البريدية</h4>     
+           <p>كن الاول بالحصول على النشرات الاعلانية للمنتجات المضافة</p>
+            <p>واحدث العروض الحصرية </p>
         <Form  onSubmit={post}>
         <Form.Row>
         <Col xs="auto">
@@ -94,19 +94,19 @@ isPost(str)?
 <Modal show={showModal} onHide={toggle} centered>
         <Modal.Header closeButton centered>
 
-          <Modal.Title  className={styles.modalTitle}>E-nwesletter</Modal.Title>
+          <Modal.Title  className={styles.modalTitle}>النشرة البريدية</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            Successfully add it
+            تمت الاضافة بنجاح
         </Modal.Body>
       </Modal> :
       <Modal show={showModal} onHide={toggle} centered>
       <Modal.Header closeButton centered>
 
-        <Modal.Title  className={styles.modalTitle}>E-nwesletter</Modal.Title>
+        <Modal.Title  className={styles.modalTitle}>النشرة البريدية</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-         Unsuccessfully add it check the privacy or the email is already exist.
+         عذرا! لم تتم الاضافة.الرجاء تفقد سياسة الخصوصية او ان البريد المدخل موجود مسبقاً
       </Modal.Body>
     </Modal>
       }

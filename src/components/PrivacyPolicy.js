@@ -3,6 +3,7 @@ import axios from 'axios';
 import React, {useState, useEffect, useCallback} from 'react';
 import { Modal,Form} from 'react-bootstrap'; 
 import './style.module.css';
+import Loader from "../components/Loader";
 
 function PrivacyPolicy() {
     const [privacy_policy, setprivacy_policy] = useState();
@@ -23,8 +24,8 @@ return(
     <>
    
    <Form.Check type="checkbox" style={{display:"inline"}} required/> 
-   <button type="button" style={{ textDecoration:"underline", textDecorationColor:"black", border:"none", marginLeft:"0.4rem"}} onClick={toggle}> Privacy Policy</button>          
-     {!privacy_policy ? (<p>loading....</p>): (
+   <button type="button" style={{ textDecoration:"underline", textDecorationColor:"black", border:"none", marginLeft:"0.4rem"}} onClick={toggle}>سياسة الخصوصية</button>          
+     {!privacy_policy ? (<Loader />): (
           privacy_policy.map((policy, index) => (
          <Modal show={show} onHide={toggle}  key={index}>
          <Modal.Header closeButton >

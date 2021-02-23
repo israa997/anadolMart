@@ -53,14 +53,14 @@ const ProfileScreen = ({history}) => {
 
   return (
     <FormContainer>
-      <h1>Profile</h1>
+      <h1>ملف المعلومات</h1>
       {message && <Message variant='danger'>{message}</Message>}
       {error && <Message variant='danger'>{error}</Message>}
-      {success && <Message variant='success'>Profile Updated</Message>}
+      {success && <Message variant='success'>تم تحديث المعلومات </Message>}
       {loading && <Loader />}
       <Form onSubmit={submitHandler}>
         <Form.Group controlId='name'>
-          <Form.Label>Name</Form.Label>
+          <Form.Label>الاسم</Form.Label>
           <Form.Control
             type='name'
             placeholder='Enter name'
@@ -70,7 +70,7 @@ const ProfileScreen = ({history}) => {
         </Form.Group>
 
         <Form.Group controlId='email'>
-          <Form.Label>Email </Form.Label>
+          <Form.Label>الايميل </Form.Label>
           <Form.Control
             type='email'
             placeholder='Enter email'
@@ -79,7 +79,7 @@ const ProfileScreen = ({history}) => {
           ></Form.Control>
         </Form.Group>
         <Form.Group controlId='phone-number'>
-          <Form.Label>phone number</Form.Label>
+          <Form.Label>رقم الهاتف</Form.Label>
           <Form.Control
             type='phone-number'
             placeholder='phone-number'
@@ -89,7 +89,7 @@ const ProfileScreen = ({history}) => {
         </Form.Group>
 
         <Form.Group controlId='password'>
-          <Form.Label>Password</Form.Label>
+          <Form.Label>كلمة المرور</Form.Label>
           <Form.Control
             type='password'
             placeholder='Enter password'
@@ -99,7 +99,7 @@ const ProfileScreen = ({history}) => {
         </Form.Group>
 
         <Form.Group controlId='confirmPassword'>
-          <Form.Label>Confirm Password</Form.Label>
+          <Form.Label>تأكيد كلمة المرور</Form.Label>
           <Form.Control
             type='password'
             placeholder='Confirm password'
@@ -109,7 +109,7 @@ const ProfileScreen = ({history}) => {
         </Form.Group>
 
         <Button type='submit' variant='primary'>
-         Update
+         تحديث
         </Button>
       </Form>
     </FormContainer>
