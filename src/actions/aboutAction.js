@@ -10,7 +10,7 @@ export const getAboutList = () => async (dispatch, getState) => {
         type: ABOUT_LIST_REQUEST,
       });
   
-      const { data } = await axios.get("http://192.168.1.38:5000/api/home/about");
+      const { data } = await axios.get("/api/home/about");
   
       dispatch({
         type: ABOUT_LIST_SUCCESS,

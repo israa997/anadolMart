@@ -7,7 +7,7 @@ import styles from './style.module.css';
 function AnnounceEmail(){
  const[announceEmail, getEmail]=useState();
  const getAlreadyExistedEmail = useCallback( async _=>{
-  const {data } = await axios.get('http://192.168.1.38:5000/api/home/announce-email');
+  const {data } = await axios.get("/api/home/announce-email");
   getEmail(data)
   for(var i = 0; i < data.length; i++){
     console.log(data[i].email);
@@ -28,7 +28,7 @@ const post = async(e) => {
   try{
  e.preventDefault();
   await axios
-  .post('http://192.168.1.38:5000/api/home/postAnnounce-email', {email});
+  .post("/api/home/postAnnounce-email", {email});
  setStr("post");
   isPost(str);
   console.log(isPost(str));

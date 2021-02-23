@@ -11,7 +11,7 @@ import {
           });
       
           const { data } = await axios.get(
-            "http://192.168.1.38:5000/api/home/banner"
+            "/api/home/banner"
           );
       
           dispatch({

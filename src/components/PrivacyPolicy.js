@@ -8,7 +8,7 @@ import Loader from "../components/Loader";
 function PrivacyPolicy() {
     const [privacy_policy, setprivacy_policy] = useState();
     const getPrivacyPolicy = useCallback( async _=>{
-        const { data } = await axios.get('http://192.168.1.38:5000/api/home/privacy-policy');
+        const { data } = await axios.get("api/home/privacy-policy");
         setprivacy_policy(data);
     } ,[] 
       );
