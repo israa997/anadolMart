@@ -23,7 +23,7 @@ return(
     <>
    
    <Form.Check type="checkbox" style={{display:"inline"}} required/> 
-   <button type="button" style={{ textDecoration:"underline", textDecorationColor:"black", border:"none" }} onClick={toggle}> Privacy Policy</button>          
+   <button type="button" style={{ textDecoration:"underline", textDecorationColor:"black", border:"none", marginLeft:"0.4rem"}} onClick={toggle}> Privacy Policy</button>          
      {!privacy_policy ? (<p>loading....</p>): (
           privacy_policy.map((policy, index) => (
          <Modal show={show} onHide={toggle}  key={index}>
