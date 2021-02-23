@@ -31,7 +31,7 @@ function SocialAccounts (){
         <span> <a className="fab fa-telegram-plane fa-2x" rel="noreferrer" target="_blank" href= {socialAccount[0].telegram_URL}> </a></span>
        <div>
            <p></p>
-            <h3>رقم التواصل</h3>
+            <h3>رقم الاتصال</h3>
         <span style={{desply: 'block', fontSize:"16px", fontWeight:"bold"}}><a href = {'tel:' + socialAccount[0].phoneNum}>{socialAccount[0].phoneNum}</a></span>
         </div>
 </div>

@@ -10,7 +10,7 @@ const Footer = () => {
       <Row>
         <Col style={{fontWeight:"bold",fontSize:"16px"}}>
         <Link to='/about'>
-          حول انضاول مارت
+          Anadol Mart حول
           </Link>
         </Col>
         </Row>
